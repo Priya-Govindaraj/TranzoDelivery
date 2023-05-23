@@ -12,10 +12,17 @@ module.exports = {
              'sans': ['ui-sans-serif', 'system-ui'],
              'serif': ['ui-serif', 'Georgia'],
              'mono': ['ui-monospace', 'SFMono-Regular'],
+             inset: ["group-hover"],
             //  'display': ['Oswald', ...],
             //  'body': ['"Open Sans"', ...],
             }
       },
+      variants: {
+        extend: {
+
+            inset: ["group-hover"],
+        }
+      }
     },
     plugins: [
       require('@tailwindcss/typography'),

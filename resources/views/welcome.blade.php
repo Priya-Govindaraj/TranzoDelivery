@@ -18,10 +18,10 @@
         </style> --}}
 </head>
 
-<body class=" bg-black font-serif ">
+<body class="bg-black font-serif">
     <div
-        class="h-20 sm:flex sm:justify-center sm:items-center rounded-b-lg  bg-center bg-white dark:bg-gray-900 selection:bg-red-500 selection:text-white sticky top-0 z-50">
-        @if (Route::has('login'))
+        class="h-20 font-serif sm:flex sm:justify-center sm:items-center text-2xl rounded-b-lg  bg-center bg-white dark:bg-gray-900 selection:bg-red-500 selection:text-white sticky top-0 z-50">
+        {{-- @if (Route::has('login'))
             <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                 @auth
                     <a href="{{ url('/home') }}"
@@ -29,24 +29,31 @@
                 @else
                  <a href="#"
                     {{-- <a href="{{ route('login') }}" --}}
-                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm  p-4 focus:outline-grey-700">Log
-                        in</a>
-                    @if (Route::has('register'))
-                        {{-- <a href="{{ route('register') }}" --}}
-                        <a href="#"
-                            class="ml-4 mr-8 p-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-700">Register</a>
-                    @endif
+        {{-- class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm  p-4 focus:outline-grey-700">Log --}}
+        {{-- in</a> --}}
+        {{-- @if (Route::has('register')) --}}
+        {{-- <a href="{{ route('register') }}" --}}
+        {{-- <a href="#"
+                            class="ml-4 mr-8 p-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-indigo-700">Register</a> --}}
+        {{-- @endif
                 @endauth
             </div>
-        @endif
+        @endif --}}
+        {{-- <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10"> --}}
+        {{-- <a href="/home" --}}
+        {{-- </div> --}}
+        <a href="/"class=" p-6 ">Home</a>
+        <a href="#order"class=" p-6 ">Order Now</a>
+        <a href="#"class=" p-6 ">Delivery Partner</a>
     </div>
-    <div class="bg-black w-full font-serif flex text-white flex-row p-12">
+    <div class="bg-black w-full font-serif flex text-white  flex-reverse sm:flex-row p-12">
         <div class="p-6 mt-6 w-8/12 text-6xl leading-loose">
-            <p> Make Easy & quick delivery of parcel with Minimum Time and Maximum Security.In this app You can track your order mannually also you get notification message about your order automatically.</p>
+            <p> Make Easy & quick delivery of parcel with Minimum Time and Maximum Security.In this app You can track
+                your order mannually also you get notification message about your order automatically.</p>
             <a href="#qr_code" class="rounded-lg text-3xl p-8 bg-blue-500">Download App</a>
         </div>
         <div class="text-7xl w-3/12">
-            <img src="/Images/home_page.jpg" class="w-70 h-fit">
+            <img src="/Images/home_page.png" class="w-70 h-fit rounded-lg m-16 ">
         </div>
     </div>
     <div class="bg-black w-full font-serif flex text-white flex-row p-12">
@@ -55,10 +62,279 @@
             <p> Scan this QR Code to install Tranzo Delivery Service
                 App from play store</p>
             <p class="text-4xl leading-loose"> Download app get quick delivery with advanced order tracking facility,
-                low memmory storage
+                low memory storage
         </div>
     </div>
+    {{-- <div class="bg-white w-full flex flex-row p-4 text-black">
 
+        <div class="relative group w-96 h-96 overflow-hidden bg-black m-auto mt-36">
+            <img class="object-cover  w-full h-full transform duration-700 backdrop-opacity-100"
+                src="/Images/documents_folder.jpeg" />
+            <div
+                class="absolute w-full h-full shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0">
+            </div>
+            <div
+                class="absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4 group-hover:-inset-y-0">
+                <div class="absolute w-full flex place-content-center">
+                    <p class="capitalize font-serif font-bold text-3xl text-center shadow-2xl text-black mt-10">
+                        Documents</p>
+                </div>
+                <div class="absolute w-full font-bold flex place-content-center mt-20">
+                    <p class="font-sans text-center w-4/5 text-black mt-10">Instant Pickup and delivery with high
+                        securtiy upto 15Kg.</p>
+                </div>
+                <button class="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48">Book
+                    Tranzo</button>
+            </div>
+        </div>
+        <div class="relative group w-96 h-96 overflow-hidden bg-black rounded-lg m-auto mt-36">
+            <img class="object-cover  w-full h-full transform duration-700 backdrop-opacity-100"
+                src="/Images/documents_folder.jpeg" height="20%" width="0%" />
+            <div
+                class="absolute w-full h-full shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0">
+            </div>
+            <div
+                class="absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4 group-hover:-inset-y-0">
+                <div class="absolute w-full flex place-content-center">
+                    <p class="capitalize font-serif font-bold text-3xl text-center shadow-2xl text-black mt-10">
+                        Food</p>
+                </div>
+                <div class="absolute w-full font-bold flex place-content-center mt-20">
+                    <p class="font-serif text-center text-2xl w-4/5 text-black mt-10">Instant Pickup and delivery with
+                        high
+                        securtiy upto 15Kg.</p>
+                </div>
+                <button class="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48">Book
+                    Tranzo</button>
+            </div>
+        </div>
+        <div class="relative group w-96 h-96 overflow-hidden bg-black m-auto mt-36">
+            <img class="object-cover  w-full h-full transform duration-700 " src="/Images/documents_folder.jpeg" />
+            <div
+                class="absolute w-full h-full shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0">
+            </div>
+            <div
+                class="absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4 group-hover:-inset-y-0">
+                <div class="absolute w-full flex place-content-center">
+                    <p class="capitalize font-serif font-bold text-3xl text-center shadow-2xl text-black mt-10">
+                        Documents</p>
+                </div>
+                <div class="absolute w-full font-bold flex place-content-center mt-20">
+                    <p class="font-sans text-center w-4/5 text-black mt-10">Instant Pickup and delivery with high
+                        securtiy upto 15Kg.</p>
+                </div>
+                <button class="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48">Book
+                    Tranzo</button>
+            </div>
+        </div>
+    </div> --}}
+    {{-- <div class="bg-white w-full flex flex-row p-4 text-black rounded-lg">
+
+        <div class="relative group w-96 h-96 overflow-hidden bg-black m-auto mt-36">
+            <img class="object-cover  w-full h-full transform duration-700 "
+                src="/Images/documents_folder.jpeg" />
+            <div
+                class="absolute w-full h-full  transform duration-500 inset-y-full group-hover:-inset-y-0">
+            </div>
+            <div
+                class="absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4 group-hover:-inset-y-0">
+                <div class="absolute w-full flex place-content-center">
+                    <p class="capitalize font-serif font-bold text-3xl text-center shadow-2xl text-black mt-10">
+                        Documents</p>
+                </div>
+                <div class="absolute w-full font-bold flex place-content-center mt-20">
+                    <p class="font-sans text-center w-4/5 text-black mt-10">Instant Pickup and delivery with high
+                        securtiy upto 15Kg.</p>
+                </div>
+                <button class="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48">Book
+                    Tranzo</button>
+            </div>
+        </div>
+        <div class="relative group w-96 h-96 overflow-hidden bg-black rounded-lg m-auto mt-36">
+            <img class="object-cover  w-full h-full transform duration-700 backdrop-opacity-100"
+                src="/Images/documents_folder.jpeg" height="20%" width="0%"/>
+            <div
+                class="absolute w-full h-full shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0">
+            </div>
+            <div
+                class="absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4 group-hover:-inset-y-0">
+                <div class="absolute w-full flex place-content-center">
+                    <p class="capitalize font-serif font-bold text-3xl text-center shadow-2xl text-black mt-10">
+                        Food</p>
+                </div>
+                <div class="absolute w-full font-bold flex place-content-center mt-20">
+                    <p class="font-serif text-center text-2xl w-4/5 text-black mt-10">Instant Pickup and delivery with high
+                        securtiy upto 15Kg.</p>
+                </div>
+                <button class="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48">Book
+                    Tranzo</button>
+            </div>
+        </div>
+        <div class="relative group w-96 h-96 overflow-hidden bg-black m-auto mt-36">
+            <img class="object-cover  w-full h-full transform duration-700 "
+                src="/Images/documents_folder.jpeg" />
+            <div
+                class="absolute w-full h-1/2 shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0">
+            </div>
+            <div
+                class="absolute bg-gradient-to-t from-black w-full h-full transform duration-500 inset-y-3/4 group-hover:-inset-y-0">
+                <div class="absolute w-full flex place-content-center">
+                    <p class="capitalize font-serif font-bold text-3xl text-center shadow-2xl text-black mt-10">
+                        Documents</p>
+                </div>
+                <div class="absolute w-full font-bold flex place-content-center mt-20">
+                    <p class="font-sans text-center w-4/5 text-black mt-10">Instant Pickup and delivery with high
+                        securtiy upto 15Kg.</p>
+                </div>
+                <button class="absolute left-1/4 bottom-4 bg-white text-black font-bold rounded-lg h-10 w-48">Book
+                    Tranzo</button>
+            </div>
+        </div>
+    </div> --}}
+    <div class="flex flex-row bg-white justify-center p-10 gap-36">
+        <div class="relative flex w-96 flex-col rounded-xl p-4 bg-gray-200 bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="relative  h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                <img src="/Images/documents.jpg" alt="img-blur-shadow" layout="fill" />
+            </div>
+            <div class="p-6 ">
+                <h5
+                    class="flex justify-center mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                    Documents
+                </h5>
+                <p class="block font-sans-serif text-justify text-xl text-light leading-relaxed antialiased">
+                    Any Packages / Documents upto 15Kg with cash on delivery and online payment. We make the things you need arrive on time. You focus on what you need to do.
+                </p>
+            </div>
+            <div class="p-6 pt-0 flex justify-center">
+                <button
+                    class="select-none rounded-lg bg-pink-500 py-3 px-6  text-center align-middle font-serif text-s font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button" data-ripple-light="true">
+                    Book Tranzo
+                </button>
+            </div>
+        </div>
+        <div class="relative flex w-96 flex-col rounded-xl p-4 bg-gray-200 bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="relative   h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                <img src="/Images/documents.jpg" alt="img-blur-shadow" layout="fill" />
+            </div>
+            <div class="p-6">
+                <h5
+                    class="flex justify-center mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                    Food
+                </h5>
+                <p class="block font-sans-serif text-justify text-xl text-light leading-relaxed antialiased">
+                    Nothing can beat the smooth delivery of foods that we provide.
+                    We deliver your foods with joy.Order Now Pack Your Food we deliver on-time.
+                </p>
+            </div>
+            <div class="p-6 pt-0 flex justify-center">
+                <button
+                class="select-none rounded-lg bg-pink-500 py-3 px-6  text-center align-middle font-serif text-s font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                type="button" data-ripple-light="true">
+                Book Tranzo
+            </button>
+            </div>
+        </div>
+        <div class="relative flex w-96 flex-col rounded-xl p-4 bg-gray-200 bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="relative h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                <img src="/Images/medicine1.jpg" alt="img-blur-shadow" layout="fill" />
+            </div>
+            <div class="p-6">
+                <h5
+                    class="flex justify-center mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                    Medicines
+                </h5>
+                <p class="block font-sans-serif text-justify text-xl text-light leading-relaxed antialiased">
+                   Instant pick-up and drop-off to deliver medicine to users(Normal user/Business user) ASAP.Trust us for the safe journey of your prescription.
+                </p>
+            </div>
+            <div class="p-6 pt-0 flex justify-center">
+                <a href="#qr_code">
+                <button
+                    class="select-none rounded-lg bg-pink-500 py-3 px-6  text-center align-middle font-serif text-s font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button" data-ripple-light="true">
+                    Book Tranzo
+                </button>
+            </a>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-row bg-white justify-center p-10 gap-36">
+        <div class="relative flex w-96 flex-col rounded-xl p-4 bg-gray-200 bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="relative h-56 overflow-hidden rounded-xl bg-white bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                <img src="/Images/cake.jpeg" alt="img-blur-shadow"  />
+            </div>
+            <div class="p-2">
+                <h5
+                    class="flex justify-center mt-4  mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                    Cakes
+                </h5>
+                <p class="block font-sans-serif text-justify text-xl text-light leading-relaxed antialiased">
+                    We make deliveries fast, so you can get back to other stuff faster.Enjoy Your Special Day without tension.We’re faster, more convenient and our prices are lower.
+                </p>
+            </div>
+            <div class="p-6 pt-0 flex justify-center">
+                <button
+                    class="select-none rounded-lg bg-pink-500 py-3 px-6  text-center align-middle font-serif text-s font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button" data-ripple-light="true">
+                    Book Tranzo
+                </button>
+            </div>
+        </div>
+        <div class="relative flex w-96 flex-col rounded-xl p-4 bg-gray-200 bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="relative  h-56 overflow-hidden rounded-xl bg-blue-white-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                <img src="/Images/parcel.png" alt="img-blur-shadow " layout="fill" />
+            </div>
+            <div class="p-6 pt-0">
+                <h5
+                    class="flex justify-center mb-2 mt-4 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                    Parcels
+                </h5>
+                <p class="block font-sans-serif text-justify text-xl text-light leading-relaxed antialiased">
+
+                    The most affordable way to send, receive, and deliver parcels!
+                    For the most satisfying delivery experience, call us.We are a safe bet for your business!
+
+                </p>
+            </div>
+            <div class="p-6 pt-0 flex justify-center">
+                <button
+                    class="select-none rounded-lg bg-pink-500 py-3 px-6  text-center align-middle font-serif text-s font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button" data-ripple-light="true">
+                    Book Tranzo
+                </button>
+            </div>
+        </div>
+        <div class="relative flex w-96 flex-col rounded-xl p-4 bg-gray-200 bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="relative h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+                <img src="/Images/parcel.png" alt="img-blur-shadow" layout="fill" />
+            </div>
+            <div class="p-6 ">
+                <h5
+                    class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                    UI/UX Review Check
+                </h5>
+                <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                    The place is close to Barceloneta Beach and bus stop just 2 min by walk
+                    and near to "Naviglio" where you can enjoy the main night life in
+                    Barcelona.
+                </p>
+            </div>
+            <div class="p-6 pt-0">
+                <button
+                    class="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-serif text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button" data-ripple-light="true">
+                    Book Tranzo
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
